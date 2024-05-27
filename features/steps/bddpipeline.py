@@ -1,5 +1,9 @@
 from behave import given, when, then 
-import snowflake.connector 
+import snowflake.connector
+from snowflake import context
+
+print("context.config.userdata: ", context.config.userdata)  # debug line
+context.connection = context.config.userdata['connection']
 
 @given('I connect to the Snowflake database')
 def step_impl(context): 
