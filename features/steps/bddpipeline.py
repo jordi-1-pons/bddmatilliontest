@@ -3,9 +3,8 @@ import snowflake.connector
 
 
 @given('I connect to the Snowflake database')
-def step_impl(context): 
-    print("context.config.userdata: ", context.config.userdata)  # debug line
-    context.connection = context.config.userdata['connection'] 
+def step_impl(context):
+    context.connection = context.config.userdata['connection']
     context.cursor = context.connection.cursor() 
 
 @when('I query the table fact_test') 
