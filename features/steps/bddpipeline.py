@@ -47,6 +47,6 @@ def step_impl(context, table_name):
 
 @then('the table {table_name} should have the columns {columns}')
 def step_impl(context, table_name, columns):
-    expected_columns = set(columns.split(', '))
+    expected_columns = set([col.strip() for col in columns.split(',')])
     actual_columns = set(context.data['columns'])
     assert expected_columns == actual_columns, f"Expected columns {expected_columns}, but got {actual_columns}"
