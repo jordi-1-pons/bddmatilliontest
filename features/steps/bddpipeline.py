@@ -37,4 +37,3 @@ def step_impl(context):
 def step_impl(context): 
     expected_columns = {'rep_id', 'rep_status'} 
     assert expected_columns.issubset(set(context.columns)), f"Missing columns: {expected_columns - set(context.columns)}"
->>>>>>> d1d910d6be15fae780fdeb54b9146226d014edc8
