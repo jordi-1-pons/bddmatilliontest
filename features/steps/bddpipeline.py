@@ -15,7 +15,7 @@ def fetch_data_from_context(context):
     columns = context.config.userdata.get("columns")
 
     if table_name is None or columns is None:
-    return None
+        return None
     
     
     data = {
