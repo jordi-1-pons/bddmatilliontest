@@ -9,7 +9,7 @@ def step_impl(context):
 
 @when('I query the table fact_test') 
 def step_impl(context): 
-    query = "SELECT column_name FROM information_schema.columns WHERE table_name = 'fact_test'" 
+    query = "SELECT column_name FROM information_schema.columns WHERE table_name = 'fac_test'" 
     context.cursor.execute(query) 
     context.columns = [row[0] for row in context.cursor.fetchall()] 
 
