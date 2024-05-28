@@ -13,6 +13,11 @@ def fetch_data_from_context(context):
     # Fetching the data
     table_name = context.config.userdata.get("table_name")
     columns = context.config.userdata.get("columns")
+
+    if table_name is None or columns is None:
+    return None
+    
+    
     data = {
         'table_name':table_name,
         'columns': columns
