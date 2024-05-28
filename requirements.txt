@@ -1,2 +1,3 @@
 behave
+snowflake-connector-python
 boto3
