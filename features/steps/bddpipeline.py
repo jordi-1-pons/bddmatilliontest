@@ -10,10 +10,12 @@ def fetch_data_from_context(context):
     Returns:
         dict: Dictionary with data fetched from context.
     """
-    # Simulated data; in practice, this should come from the SQL query data
+    # Fetching the data
+    table_name = context.config.userdata.get("table_name")
+    columns = context.config.userdata.get("columns")
     data = {
-        'table_name': 'fact_test',
-        'columns': ['rep_id', 'rep_status']
+        'table_name':table_name,
+        'columns': columns
     }
     return data
 
