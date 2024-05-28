@@ -3,4 +3,4 @@ Feature: Verify fact_test table
     Given the table name is "fact_test"
     And the columns are "rep_id, rep_status"
     When I query the table fact_test
-    Then the table fact_test should have the columns rep_id and rep_status
+    Then the table fact_test should have the columns rep_id, rep_status
