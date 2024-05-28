@@ -12,20 +12,20 @@ def fetch_data_from_matillion(context):
     columns = cursor.fetchall()
     return [column[0] for column in columns]
 
-@given('the table name is "fact_test"')
+@given('the table name is "{table_name}"')
 def step_given_table_name(context, table_name):
     context.table_name = table_name
 
-@given('the columns are "rep_id, rep_status"')
+@given('the columns are "{columns}"')
 def step_given_columns(context, columns):
     context.expected_columns = columns.split(', ')
 
-@when('I query the table fact_test')
-def step_when_query_table(context):
+@when('I query the table {table_name}')
+def step_when_query_table(context, table_name):
     context.fetched_columns = fetch_data_from_matillion(context)
 
-@then('the table fact_test should have the columns rep_id, rep_status')
-def step_then_verify_columns(context):
+@then('the table {table_name} should have the columns {columns}')
+def step_then_verify_columns(context, table_name, columns):
     actual_columns = set(context.fetched_columns)
-    expected_columns = set(context.expected_columns)
+    expected_columns = set(columns.split(', '))
     assert actual_columns == expected_columns, f"Expected columns {expected_columns}, but got {actual_columns}"
