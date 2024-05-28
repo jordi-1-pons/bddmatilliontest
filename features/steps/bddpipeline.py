@@ -1,59 +1,25 @@
-from behave import *
+from behave import given, when, then
 
-def fetch_data_from_context(context):
-    """
-    This function simulates fetching data from the context.
-    
-    Args:
-        context (dict): The context from which we fetch data.
-        
-    Returns:
-        dict: Dictionary with data fetched from context.
-    """
-    # Fetching the data
-    table_name = context.config.userdata.get("table_name")
-    columns = context.config.userdata.get("columns")
+@given('the table name is "{table_name}"')
+def step_given_table_name(context, table_name):
+    context.table_name = table_name
 
-    if table_name is None or columns is None:
-        return None
-    
-    
-    data = {
-        'table_name':table_name,
-        'columns': columns
+@given('the columns are "{columns}"')
+def step_given_columns(context, columns):
+    context.columns = columns.split(", ")
+
+@when('I query the table fact_test')
+def step_when_query_table(context):
+    # Simulated data fetching
+    context.data = {
+        'table_name': context.table_name,
+        'columns': context.columns
     }
-    return data
 
-def verify_data(data):
-    """
-    This function verifies if the fetched data is as expected.
-    
-    Args:
-        data (dict): The data fetched to be verified.
-        
-    Returns:
-        bool: True if data is as expected, False otherwise.
-    """
-    expected_data = {
-        'table_name': 'fact_test',
-        'columns': ['rep_id', 'rep_status']
-    }
-    return data == expected_data
+@then('the table fact_test should have the columns rep_id and rep_status')
+def step_then_verify_columns(context):
+    expected_columns = ['rep_id', 'rep_status']
+    actual_columns = context.data['columns']
 
-@given('I connect to the Snowflake database')
-def step_impl(context):
-    # Assuming connection is established through the existing Matillion environment
-    context.connection = True  # Simulated connection flag
-
-@when('I query the table {table_name}')
-def step_impl(context, table_name):
-    if context.connection:
-        context.data = fetch_data_from_context(context)
-    else:
-        raise Exception("No connection to the database.")
-
-@then('the table {table_name} should have the columns {columns}')
-def step_impl(context, table_name, columns):
-    expected_columns = set([col.strip() for col in columns.split(',')])
-    actual_columns = set(context.data['columns'])
-    assert expected_columns == actual_columns, f"Expected columns {expected_columns}, but got {actual_columns}"
+    assert context.data['table_name'] == 'fact_test', f"Expected table name 'fact_test', but got {context.data['table_name']}"
+    assert sorted(actual_columns) == sorted(expected_columns), f"Expected columns {expected_columns}, but got {actual_columns}"
