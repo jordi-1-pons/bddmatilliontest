@@ -1,3 +1,4 @@
+import json
 from behave import *
 
 # Define a step to get table name
@@ -12,16 +13,14 @@ def step_given_columns(context, columns):
     context.columns = columns.split(', ')
     print(f"Columns set to: {context.columns}")
 
-# Step to query the database and fetch columns
+# Step to read the file and fetch columns
 @when('I query the table {table_name}')
 def step_when_query_table(context, table_name):
-    print("Querying the table...")
-    context.cursor = context.cursor()
-    query = "SELECT column_name FROM information_schema.columns WHERE table_name = '{}'".format(table_name)
-    context.cursor.execute(query)
-    result = context.cursor.fetchall()
-    context.fetched_columns = [row[0] for row in result]
-    print(f"Fetched columns: {context.fetched_columns}")
+    file_path = '/tmp/table_data/table_data.txt'
+    with open(file_path, 'r') as file:
+        data = json.load(file)
+        context.fetched_columns = data['column_names']
+        print(f"Fetched columns from file: {context.fetched_columns}")
 
 # Step to verify the columns
 @then('the table {table_name} should have the columns {expected_columns}')
