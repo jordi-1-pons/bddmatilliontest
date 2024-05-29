@@ -18,7 +18,7 @@ def step_when_query_table(context, table_name):
     # Read table data from the file
     file_path = '/tmp/table_data/table_data.txt'
     with open(file_path, 'r') as file:
-        data = eval(file.read())  # Using eval to convert string back to dictionary
+        data = json.load(file)  # Use json.load to read JSON data
     context.fetched_table_name = data['table_name']
     context.fetched_columns = data['columns']
 
