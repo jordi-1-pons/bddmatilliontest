@@ -1,0 +1,1289 @@
+{
+    "objects": [
+        {
+            "jobObject": {
+                "JobType": ".OrchestrationJob",
+                "id": 192253,
+                "revision": 76,
+                "created": 1717517712525,
+                "timestamp": 1717517712525,
+                "components": {
+                    "192551": {
+                        "id": 192551,
+                        "inputCardinality": "ZERO",
+                        "outputCardinality": "MANY",
+                        "connectorHint": "UNCONDITIONAL",
+                        "executionHint": "FLOW",
+                        "implementationID": 444132438,
+                        "x": -512,
+                        "y": 0,
+                        "width": 32,
+                        "height": 32,
+                        "inputConnectorIDs": [],
+                        "outputSuccessConnectorIDs": [],
+                        "outputFailureConnectorIDs": [],
+                        "outputUnconditionalConnectorIDs": [
+                            194528
+                        ],
+                        "outputTrueConnectorIDs": [],
+                        "outputFalseConnectorIDs": [],
+                        "exportMappings": {},
+                        "parameters": {
+                            "1": {
+                                "slot": 1,
+                                "name": "Start",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "Start 0"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            }
+                        },
+                        "activationStatus": "ENABLED",
+                        "outputIterationConnectorIDs": [],
+                        "inputIterationConnectorIDs": []
+                    },
+                    "193458": {
+                        "id": 193458,
+                        "inputCardinality": "ONE",
+                        "outputCardinality": "MANY",
+                        "connectorHint": "SUCCESS_FAIL",
+                        "executionHint": "EXECUTE",
+                        "implementationID": 1611478312,
+                        "x": -304,
+                        "y": -48,
+                        "width": 32,
+                        "height": 32,
+                        "inputConnectorIDs": [
+                            194535
+                        ],
+                        "outputSuccessConnectorIDs": [],
+                        "outputFailureConnectorIDs": [],
+                        "outputUnconditionalConnectorIDs": [],
+                        "outputTrueConnectorIDs": [],
+                        "outputFalseConnectorIDs": [],
+                        "exportMappings": {},
+                        "parameters": {
+                            "1": {
+                                "slot": 1,
+                                "name": "Name",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "Create Table 0"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "2": {
+                                "slot": 2,
+                                "name": "Database",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "COM_GERMANY_IM_DNA_STG"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "3": {
+                                "slot": 3,
+                                "name": "Schema",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "STG_GERMANY"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "4": {
+                                "slot": 4,
+                                "name": "New Table Name",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "fact_test"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "5": {
+                                "slot": 5,
+                                "name": "Columns",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "rep_id"
+                                            },
+                                            "2": {
+                                                "slot": 2,
+                                                "type": "STRING",
+                                                "value": "VARCHAR"
+                                            },
+                                            "3": {
+                                                "slot": 3,
+                                                "type": "INTEGER",
+                                                "value": ""
+                                            },
+                                            "4": {
+                                                "slot": 4,
+                                                "type": "INTEGER",
+                                                "value": ""
+                                            },
+                                            "5": {
+                                                "slot": 5,
+                                                "type": "STRING",
+                                                "value": ""
+                                            },
+                                            "6": {
+                                                "slot": 6,
+                                                "type": "STRING",
+                                                "value": "No"
+                                            },
+                                            "7": {
+                                                "slot": 7,
+                                                "type": "STRING",
+                                                "value": "No"
+                                            },
+                                            "8": {
+                                                "slot": 8,
+                                                "type": "STRING",
+                                                "value": ""
+                                            }
+                                        }
+                                    },
+                                    "2": {
+                                        "slot": 2,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "rep_status"
+                                            },
+                                            "2": {
+                                                "slot": 2,
+                                                "type": "STRING",
+                                                "value": "VARCHAR"
+                                            },
+                                            "3": {
+                                                "slot": 3,
+                                                "type": "INTEGER",
+                                                "value": ""
+                                            },
+                                            "4": {
+                                                "slot": 4,
+                                                "type": "INTEGER",
+                                                "value": ""
+                                            },
+                                            "5": {
+                                                "slot": 5,
+                                                "type": "STRING",
+                                                "value": ""
+                                            },
+                                            "6": {
+                                                "slot": 6,
+                                                "type": "STRING",
+                                                "value": "No"
+                                            },
+                                            "7": {
+                                                "slot": 7,
+                                                "type": "STRING",
+                                                "value": "No"
+                                            },
+                                            "8": {
+                                                "slot": 8,
+                                                "type": "STRING",
+                                                "value": ""
+                                            }
+                                        }
+                                    },
+                                    "3": {
+                                        "slot": 3,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "price"
+                                            },
+                                            "2": {
+                                                "slot": 2,
+                                                "type": "STRING",
+                                                "value": "NUMBER"
+                                            },
+                                            "3": {
+                                                "slot": 3,
+                                                "type": "INTEGER",
+                                                "value": ""
+                                            },
+                                            "4": {
+                                                "slot": 4,
+                                                "type": "INTEGER",
+                                                "value": ""
+                                            },
+                                            "5": {
+                                                "slot": 5,
+                                                "type": "STRING",
+                                                "value": ""
+                                            },
+                                            "6": {
+                                                "slot": 6,
+                                                "type": "STRING",
+                                                "value": "No"
+                                            },
+                                            "7": {
+                                                "slot": 7,
+                                                "type": "STRING",
+                                                "value": "No"
+                                            },
+                                            "8": {
+                                                "slot": 8,
+                                                "type": "STRING",
+                                                "value": ""
+                                            }
+                                        }
+                                    },
+                                    "4": {
+                                        "slot": 4,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "quantity"
+                                            },
+                                            "2": {
+                                                "slot": 2,
+                                                "type": "STRING",
+                                                "value": "NUMBER"
+                                            },
+                                            "3": {
+                                                "slot": 3,
+                                                "type": "INTEGER",
+                                                "value": ""
+                                            },
+                                            "4": {
+                                                "slot": 4,
+                                                "type": "INTEGER",
+                                                "value": ""
+                                            },
+                                            "5": {
+                                                "slot": 5,
+                                                "type": "STRING",
+                                                "value": ""
+                                            },
+                                            "6": {
+                                                "slot": 6,
+                                                "type": "STRING",
+                                                "value": "No"
+                                            },
+                                            "7": {
+                                                "slot": 7,
+                                                "type": "STRING",
+                                                "value": "No"
+                                            },
+                                            "8": {
+                                                "slot": 8,
+                                                "type": "STRING",
+                                                "value": ""
+                                            }
+                                        }
+                                    },
+                                    "5": {
+                                        "slot": 5,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "prod_id"
+                                            },
+                                            "2": {
+                                                "slot": 2,
+                                                "type": "STRING",
+                                                "value": "VARCHAR"
+                                            },
+                                            "3": {
+                                                "slot": 3,
+                                                "type": "INTEGER",
+                                                "value": ""
+                                            },
+                                            "4": {
+                                                "slot": 4,
+                                                "type": "INTEGER",
+                                                "value": ""
+                                            },
+                                            "5": {
+                                                "slot": 5,
+                                                "type": "STRING",
+                                                "value": ""
+                                            },
+                                            "6": {
+                                                "slot": 6,
+                                                "type": "STRING",
+                                                "value": "No"
+                                            },
+                                            "7": {
+                                                "slot": 7,
+                                                "type": "STRING",
+                                                "value": "No"
+                                            },
+                                            "8": {
+                                                "slot": 8,
+                                                "type": "STRING",
+                                                "value": ""
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "6": {
+                                "slot": 6,
+                                "name": "Create/Replace",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "Create if not exists"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "7": {
+                                "slot": 7,
+                                "name": "Clustering Keys",
+                                "elements": {},
+                                "visible": true
+                            },
+                            "8": {
+                                "slot": 8,
+                                "name": "Data Retention Time in Days",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "INTEGER",
+                                                "value": ""
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "9": {
+                                "slot": 9,
+                                "name": "Comment",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": ""
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "11": {
+                                "slot": 11,
+                                "name": "Primary Keys",
+                                "elements": {},
+                                "visible": true
+                            },
+                            "12": {
+                                "slot": 12,
+                                "name": "Table Type",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "Permanent"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "13": {
+                                "slot": 13,
+                                "name": "Default DDL Collation",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": ""
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            }
+                        },
+                        "activationStatus": "ENABLED",
+                        "outputIterationConnectorIDs": [],
+                        "inputIterationConnectorIDs": []
+                    },
+                    "194520": {
+                        "id": 194520,
+                        "inputCardinality": "ONE",
+                        "outputCardinality": "MANY",
+                        "connectorHint": "SUCCESS_FAIL",
+                        "executionHint": "EXECUTE",
+                        "implementationID": -1291941950,
+                        "x": -416,
+                        "y": 0,
+                        "width": 32,
+                        "height": 32,
+                        "inputConnectorIDs": [
+                            194528
+                        ],
+                        "outputSuccessConnectorIDs": [
+                            217584
+                        ],
+                        "outputFailureConnectorIDs": [],
+                        "outputUnconditionalConnectorIDs": [
+                            194535,
+                            227419
+                        ],
+                        "outputTrueConnectorIDs": [],
+                        "outputFalseConnectorIDs": [],
+                        "exportMappings": {},
+                        "parameters": {
+                            "1": {
+                                "slot": 1,
+                                "name": "Name",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "Delete Tables 0"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "2": {
+                                "slot": 2,
+                                "name": "Database",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "COM_GERMANY_IM_DNA_STG"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "3": {
+                                "slot": 3,
+                                "name": "Schema",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "STG_GERMANY"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "4": {
+                                "slot": 4,
+                                "name": "Target Table",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "fact_test1"
+                                            }
+                                        }
+                                    },
+                                    "2": {
+                                        "slot": 2,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "fact_test2"
+                                            }
+                                        }
+                                    },
+                                    "3": {
+                                        "slot": 3,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "fact_test3"
+                                            }
+                                        }
+                                    },
+                                    "4": {
+                                        "slot": 4,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "fact_test"
+                                            }
+                                        }
+                                    },
+                                    "5": {
+                                        "slot": 5,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "prod_dim"
+                                            }
+                                        }
+                                    },
+                                    "6": {
+                                        "slot": 6,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "rep_dim"
+                                            }
+                                        }
+                                    },
+                                    "7": {
+                                        "slot": 7,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "cdh"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "5": {
+                                "slot": 5,
+                                "name": "Ignore Missing",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "Yes"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "6": {
+                                "slot": 6,
+                                "name": "",
+                                "elements": {},
+                                "visible": false
+                            }
+                        },
+                        "activationStatus": "ENABLED",
+                        "outputIterationConnectorIDs": [],
+                        "inputIterationConnectorIDs": []
+                    },
+                    "217585": {
+                        "id": 217585,
+                        "inputCardinality": "ONE",
+                        "outputCardinality": "MANY",
+                        "connectorHint": "SUCCESS_FAIL",
+                        "executionHint": "EXECUTE",
+                        "implementationID": 1611478312,
+                        "x": -297,
+                        "y": 21,
+                        "width": 32,
+                        "height": 32,
+                        "inputConnectorIDs": [
+                            217584
+                        ],
+                        "outputSuccessConnectorIDs": [],
+                        "outputFailureConnectorIDs": [],
+                        "outputUnconditionalConnectorIDs": [],
+                        "outputTrueConnectorIDs": [],
+                        "outputFalseConnectorIDs": [],
+                        "exportMappings": {},
+                        "parameters": {
+                            "1": {
+                                "slot": 1,
+                                "name": "Name",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "Create Table 1"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "2": {
+                                "slot": 2,
+                                "name": "Database",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "COM_GERMANY_IM_DNA_STG"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "3": {
+                                "slot": 3,
+                                "name": "Schema",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "STG_GERMANY"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "4": {
+                                "slot": 4,
+                                "name": "New Table Name",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "rep_dim"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "5": {
+                                "slot": 5,
+                                "name": "Columns",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "rep_id"
+                                            },
+                                            "2": {
+                                                "slot": 2,
+                                                "type": "STRING",
+                                                "value": "VARCHAR"
+                                            },
+                                            "3": {
+                                                "slot": 3,
+                                                "type": "INTEGER",
+                                                "value": ""
+                                            },
+                                            "4": {
+                                                "slot": 4,
+                                                "type": "INTEGER",
+                                                "value": ""
+                                            },
+                                            "5": {
+                                                "slot": 5,
+                                                "type": "STRING",
+                                                "value": ""
+                                            },
+                                            "6": {
+                                                "slot": 6,
+                                                "type": "STRING",
+                                                "value": "No"
+                                            },
+                                            "7": {
+                                                "slot": 7,
+                                                "type": "STRING",
+                                                "value": "No"
+                                            },
+                                            "8": {
+                                                "slot": 8,
+                                                "type": "STRING",
+                                                "value": ""
+                                            }
+                                        }
+                                    },
+                                    "2": {
+                                        "slot": 2,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "rep_status"
+                                            },
+                                            "2": {
+                                                "slot": 2,
+                                                "type": "STRING",
+                                                "value": "VARCHAR"
+                                            },
+                                            "3": {
+                                                "slot": 3,
+                                                "type": "INTEGER",
+                                                "value": ""
+                                            },
+                                            "4": {
+                                                "slot": 4,
+                                                "type": "INTEGER",
+                                                "value": ""
+                                            },
+                                            "5": {
+                                                "slot": 5,
+                                                "type": "STRING",
+                                                "value": ""
+                                            },
+                                            "6": {
+                                                "slot": 6,
+                                                "type": "STRING",
+                                                "value": "No"
+                                            },
+                                            "7": {
+                                                "slot": 7,
+                                                "type": "STRING",
+                                                "value": "No"
+                                            },
+                                            "8": {
+                                                "slot": 8,
+                                                "type": "STRING",
+                                                "value": ""
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "6": {
+                                "slot": 6,
+                                "name": "Create/Replace",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "Create if not exists"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "7": {
+                                "slot": 7,
+                                "name": "Clustering Keys",
+                                "elements": {},
+                                "visible": true
+                            },
+                            "8": {
+                                "slot": 8,
+                                "name": "Data Retention Time in Days",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "INTEGER",
+                                                "value": ""
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "9": {
+                                "slot": 9,
+                                "name": "Comment",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": ""
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "11": {
+                                "slot": 11,
+                                "name": "Primary Keys",
+                                "elements": {},
+                                "visible": true
+                            },
+                            "12": {
+                                "slot": 12,
+                                "name": "Table Type",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "Permanent"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "13": {
+                                "slot": 13,
+                                "name": "Default DDL Collation",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": ""
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            }
+                        },
+                        "activationStatus": "ENABLED",
+                        "outputIterationConnectorIDs": [],
+                        "inputIterationConnectorIDs": []
+                    },
+                    "227414": {
+                        "id": 227414,
+                        "inputCardinality": "ONE",
+                        "outputCardinality": "MANY",
+                        "connectorHint": "SUCCESS_FAIL",
+                        "executionHint": "EXECUTE",
+                        "implementationID": 1611478312,
+                        "x": -302,
+                        "y": 103,
+                        "width": 32,
+                        "height": 32,
+                        "inputConnectorIDs": [
+                            227419
+                        ],
+                        "outputSuccessConnectorIDs": [],
+                        "outputFailureConnectorIDs": [],
+                        "outputUnconditionalConnectorIDs": [],
+                        "outputTrueConnectorIDs": [],
+                        "outputFalseConnectorIDs": [],
+                        "exportMappings": {},
+                        "parameters": {
+                            "1": {
+                                "slot": 1,
+                                "name": "Name",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "Create Table 2"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "2": {
+                                "slot": 2,
+                                "name": "Database",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "COM_GERMANY_IM_DNA_STG"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "3": {
+                                "slot": 3,
+                                "name": "Schema",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "STG_GERMANY"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "4": {
+                                "slot": 4,
+                                "name": "New Table Name",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "prod_dim"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "5": {
+                                "slot": 5,
+                                "name": "Columns",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "prod_id"
+                                            },
+                                            "2": {
+                                                "slot": 2,
+                                                "type": "STRING",
+                                                "value": "VARCHAR"
+                                            },
+                                            "3": {
+                                                "slot": 3,
+                                                "type": "INTEGER",
+                                                "value": ""
+                                            },
+                                            "4": {
+                                                "slot": 4,
+                                                "type": "INTEGER",
+                                                "value": ""
+                                            },
+                                            "5": {
+                                                "slot": 5,
+                                                "type": "STRING",
+                                                "value": ""
+                                            },
+                                            "6": {
+                                                "slot": 6,
+                                                "type": "STRING",
+                                                "value": "No"
+                                            },
+                                            "7": {
+                                                "slot": 7,
+                                                "type": "STRING",
+                                                "value": "No"
+                                            },
+                                            "8": {
+                                                "slot": 8,
+                                                "type": "STRING",
+                                                "value": ""
+                                            }
+                                        }
+                                    },
+                                    "2": {
+                                        "slot": 2,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "prod_status"
+                                            },
+                                            "2": {
+                                                "slot": 2,
+                                                "type": "STRING",
+                                                "value": "VARCHAR"
+                                            },
+                                            "3": {
+                                                "slot": 3,
+                                                "type": "INTEGER",
+                                                "value": ""
+                                            },
+                                            "4": {
+                                                "slot": 4,
+                                                "type": "INTEGER",
+                                                "value": ""
+                                            },
+                                            "5": {
+                                                "slot": 5,
+                                                "type": "STRING",
+                                                "value": ""
+                                            },
+                                            "6": {
+                                                "slot": 6,
+                                                "type": "STRING",
+                                                "value": "No"
+                                            },
+                                            "7": {
+                                                "slot": 7,
+                                                "type": "STRING",
+                                                "value": "No"
+                                            },
+                                            "8": {
+                                                "slot": 8,
+                                                "type": "STRING",
+                                                "value": ""
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "6": {
+                                "slot": 6,
+                                "name": "Create/Replace",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "Create if not exists"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "7": {
+                                "slot": 7,
+                                "name": "Clustering Keys",
+                                "elements": {},
+                                "visible": true
+                            },
+                            "8": {
+                                "slot": 8,
+                                "name": "Data Retention Time in Days",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "INTEGER",
+                                                "value": ""
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "9": {
+                                "slot": 9,
+                                "name": "Comment",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": ""
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "11": {
+                                "slot": 11,
+                                "name": "Primary Keys",
+                                "elements": {},
+                                "visible": true
+                            },
+                            "12": {
+                                "slot": 12,
+                                "name": "Table Type",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "Permanent"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "13": {
+                                "slot": 13,
+                                "name": "Default DDL Collation",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": ""
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            }
+                        },
+                        "activationStatus": "ENABLED",
+                        "outputIterationConnectorIDs": [],
+                        "inputIterationConnectorIDs": []
+                    }
+                },
+                "successConnectors": {
+                    "217584": {
+                        "id": 217584,
+                        "sourceID": 194520,
+                        "targetID": 217585
+                    }
+                },
+                "failureConnectors": {},
+                "unconditionalConnectors": {
+                    "194528": {
+                        "id": 194528,
+                        "sourceID": 192551,
+                        "targetID": 194520
+                    },
+                    "194535": {
+                        "id": 194535,
+                        "sourceID": 194520,
+                        "targetID": 193458
+                    },
+                    "227419": {
+                        "id": 227419,
+                        "sourceID": 194520,
+                        "targetID": 227414
+                    }
+                },
+                "trueConnectors": {},
+                "falseConnectors": {},
+                "iterationConnectors": {},
+                "noteConnectors": {},
+                "canUndo": true,
+                "undoCommand": "Delete",
+                "undoCreated": 1717491788624,
+                "canRedo": false,
+                "redoCommand": "",
+                "redoCreated": -1,
+                "notes": {},
+                "variables": {},
+                "grids": {}
+            },
+            "info": {
+                "id": 192253,
+                "name": "createtables_test",
+                "description": "",
+                "type": "ORCHESTRATION",
+                "tag": "c139bf1f-7632-41ae-9c9f-40884afd0085"
+            },
+            "path": [
+                "pipelines"
+            ]
+        }
+    ],
+    "version": "1.67.7",
+    "environment": "snowflake"
+}
