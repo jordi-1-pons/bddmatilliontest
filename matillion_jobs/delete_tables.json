@@ -1,0 +1,279 @@
+{
+    "objects": [
+        {
+            "jobObject": {
+                "JobType": ".OrchestrationJob",
+                "id": 223278,
+                "revision": 10,
+                "created": 1717591303181,
+                "timestamp": 1717591303181,
+                "components": {
+                    "223277": {
+                        "id": 223277,
+                        "inputCardinality": "ZERO",
+                        "outputCardinality": "MANY",
+                        "connectorHint": "UNCONDITIONAL",
+                        "executionHint": "FLOW",
+                        "implementationID": 444132438,
+                        "x": -512,
+                        "y": 0,
+                        "width": 32,
+                        "height": 32,
+                        "inputConnectorIDs": [],
+                        "outputSuccessConnectorIDs": [],
+                        "outputFailureConnectorIDs": [],
+                        "outputUnconditionalConnectorIDs": [
+                            223280
+                        ],
+                        "outputTrueConnectorIDs": [],
+                        "outputFalseConnectorIDs": [],
+                        "exportMappings": {},
+                        "parameters": {
+                            "1": {
+                                "slot": 1,
+                                "name": "Start",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "Start 0"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            }
+                        },
+                        "activationStatus": "ENABLED",
+                        "outputIterationConnectorIDs": [],
+                        "inputIterationConnectorIDs": []
+                    },
+                    "223283": {
+                        "id": 223283,
+                        "inputCardinality": "ONE",
+                        "outputCardinality": "MANY",
+                        "connectorHint": "SUCCESS_FAIL",
+                        "executionHint": "EXECUTE",
+                        "implementationID": -1291941950,
+                        "x": -416,
+                        "y": 0,
+                        "width": 32,
+                        "height": 32,
+                        "inputConnectorIDs": [
+                            223280
+                        ],
+                        "outputSuccessConnectorIDs": [],
+                        "outputFailureConnectorIDs": [],
+                        "outputUnconditionalConnectorIDs": [],
+                        "outputTrueConnectorIDs": [],
+                        "outputFalseConnectorIDs": [],
+                        "exportMappings": {},
+                        "parameters": {
+                            "1": {
+                                "slot": 1,
+                                "name": "Name",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "Delete Tables 0"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "2": {
+                                "slot": 2,
+                                "name": "Database",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "COM_GERMANY_IM_DNA_STG"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "3": {
+                                "slot": 3,
+                                "name": "Schema",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "STG_GERMANY"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "4": {
+                                "slot": 4,
+                                "name": "Target Table",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "fact_test1"
+                                            }
+                                        }
+                                    },
+                                    "2": {
+                                        "slot": 2,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "fact_test2"
+                                            }
+                                        }
+                                    },
+                                    "3": {
+                                        "slot": 3,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "fact_test3"
+                                            }
+                                        }
+                                    },
+                                    "4": {
+                                        "slot": 4,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "fact_test"
+                                            }
+                                        }
+                                    },
+                                    "5": {
+                                        "slot": 5,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "rep_dim"
+                                            }
+                                        }
+                                    },
+                                    "6": {
+                                        "slot": 6,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "prod_dim"
+                                            }
+                                        }
+                                    },
+                                    "7": {
+                                        "slot": 7,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "CDH"
+                                            }
+                                        }
+                                    },
+                                    "8": {
+                                        "slot": 8,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "rrd_test"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "5": {
+                                "slot": 5,
+                                "name": "Ignore Missing",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "Yes"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "6": {
+                                "slot": 6,
+                                "name": "",
+                                "elements": {},
+                                "visible": false
+                            }
+                        },
+                        "activationStatus": "ENABLED",
+                        "outputIterationConnectorIDs": [],
+                        "inputIterationConnectorIDs": []
+                    }
+                },
+                "successConnectors": {},
+                "failureConnectors": {},
+                "unconditionalConnectors": {
+                    "223280": {
+                        "id": 223280,
+                        "sourceID": 223277,
+                        "targetID": 223283
+                    }
+                },
+                "trueConnectors": {},
+                "falseConnectors": {},
+                "iterationConnectors": {},
+                "noteConnectors": {},
+                "canUndo": true,
+                "undoCommand": "Set Parameter",
+                "undoCreated": 1717505866547,
+                "canRedo": false,
+                "redoCommand": "",
+                "redoCreated": -1,
+                "notes": {},
+                "variables": {},
+                "grids": {}
+            },
+            "info": {
+                "id": 223278,
+                "name": "delete_tables",
+                "description": "",
+                "type": "ORCHESTRATION",
+                "tag": "6055f5e6-bba3-43af-b041-a813d0400e21"
+            },
+            "path": [
+                "pipelines"
+            ]
+        }
+    ],
+    "version": "1.67.7",
+    "environment": "snowflake"
+}

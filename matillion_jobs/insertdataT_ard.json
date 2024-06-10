@@ -1,0 +1,429 @@
+{
+    "objects": [
+        {
+            "jobObject": {
+                "JobType": ".TransformationJob",
+                "id": 193494,
+                "revision": 109,
+                "created": 1717584318920,
+                "timestamp": 1717584318920,
+                "components": {
+                    "193871": {
+                        "id": 193871,
+                        "inputCardinality": "ONE",
+                        "outputCardinality": "ZERO",
+                        "implementationID": 211954775,
+                        "x": 496,
+                        "y": 112,
+                        "width": 32,
+                        "height": 32,
+                        "inputConnectorIDs": [
+                            244308
+                        ],
+                        "outputConnectorIDs": [],
+                        "parameters": {
+                            "1": {
+                                "slot": 1,
+                                "name": "Name",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "fact_test"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "2": {
+                                "slot": 2,
+                                "name": "Target Table",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "fact_test"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "4": {
+                                "slot": 4,
+                                "name": "Column Mapping",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "rep_id"
+                                            },
+                                            "2": {
+                                                "slot": 2,
+                                                "type": "STRING",
+                                                "value": "rep_id"
+                                            }
+                                        }
+                                    },
+                                    "2": {
+                                        "slot": 2,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "prod_id"
+                                            },
+                                            "2": {
+                                                "slot": 2,
+                                                "type": "STRING",
+                                                "value": "prod_id"
+                                            }
+                                        }
+                                    },
+                                    "3": {
+                                        "slot": 3,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "price"
+                                            },
+                                            "2": {
+                                                "slot": 2,
+                                                "type": "STRING",
+                                                "value": "price"
+                                            }
+                                        }
+                                    },
+                                    "4": {
+                                        "slot": 4,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "quantity"
+                                            },
+                                            "2": {
+                                                "slot": 2,
+                                                "type": "STRING",
+                                                "value": "quantity"
+                                            }
+                                        }
+                                    },
+                                    "5": {
+                                        "slot": 5,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "rep_status"
+                                            },
+                                            "2": {
+                                                "slot": 2,
+                                                "type": "STRING",
+                                                "value": "rep_status"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "5": {
+                                "slot": 5,
+                                "name": "Truncate",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "Truncate"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "200": {
+                                "slot": 200,
+                                "name": "Schema",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "STG_GERMANY"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "201": {
+                                "slot": 201,
+                                "name": "Database",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "COM_GERMANY_IM_DNA_STG"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "202": {
+                                "slot": 202,
+                                "name": "Warehouse",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "COM_IMDNA_GERMANY_WH_S"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "203": {
+                                "slot": 203,
+                                "name": "Fix Data Type Mismatches",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "Yes"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "204": {
+                                "slot": 204,
+                                "name": "Order By",
+                                "elements": {},
+                                "visible": true
+                            }
+                        },
+                        "exportMappings": {},
+                        "activationStatus": "ENABLED"
+                    },
+                    "243058": {
+                        "id": 243058,
+                        "inputCardinality": "ZERO",
+                        "outputCardinality": "MANY",
+                        "implementationID": 1354890871,
+                        "x": 336,
+                        "y": 112,
+                        "width": 32,
+                        "height": 32,
+                        "inputConnectorIDs": [],
+                        "outputConnectorIDs": [
+                            244308
+                        ],
+                        "parameters": {
+                            "1": {
+                                "slot": 1,
+                                "name": "Name",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "CDH"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "2": {
+                                "slot": 2,
+                                "name": "Target Table",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "CDH"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "3": {
+                                "slot": 3,
+                                "name": "Column Names",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "rep_id"
+                                            }
+                                        }
+                                    },
+                                    "2": {
+                                        "slot": 2,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "prod_id"
+                                            }
+                                        }
+                                    },
+                                    "3": {
+                                        "slot": 3,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "rep_status"
+                                            }
+                                        }
+                                    },
+                                    "4": {
+                                        "slot": 4,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "price"
+                                            }
+                                        }
+                                    },
+                                    "5": {
+                                        "slot": 5,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "quantity"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "5": {
+                                "slot": 5,
+                                "name": "Schema",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "STG_GERMANY"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "6": {
+                                "slot": 6,
+                                "name": "Database",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "COM_GERMANY_IM_DNA_STG"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "7": {
+                                "slot": 7,
+                                "name": "Offset",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "INTEGER",
+                                                "value": ""
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            }
+                        },
+                        "exportMappings": {},
+                        "activationStatus": "ENABLED"
+                    }
+                },
+                "connectors": {
+                    "244308": {
+                        "id": 244308,
+                        "sourceID": 243058,
+                        "targetID": 193871
+                    }
+                },
+                "canUndo": false,
+                "undoCommand": "Rename Job",
+                "undoCreated": 1717572910734,
+                "canRedo": false,
+                "redoCommand": "",
+                "redoCreated": 1716470870419,
+                "notes": {},
+                "noteConnectors": {},
+                "variables": {},
+                "grids": {}
+            },
+            "info": {
+                "id": 193494,
+                "name": "insertdataT_ard",
+                "description": "",
+                "type": "TRANSFORMATION",
+                "tag": "d19469fe-3713-4321-b53e-3ee6151b4ea0"
+            },
+            "path": [
+                "pipelines"
+            ]
+        }
+    ],
+    "version": "1.67.7",
+    "environment": "snowflake"
+}

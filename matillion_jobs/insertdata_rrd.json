@@ -1,0 +1,170 @@
+{
+    "objects": [
+        {
+            "jobObject": {
+                "JobType": ".OrchestrationJob",
+                "id": 246152,
+                "revision": 6,
+                "created": 1717584155907,
+                "timestamp": 1717584155907,
+                "components": {
+                    "246159": {
+                        "id": 246159,
+                        "inputCardinality": "ZERO",
+                        "outputCardinality": "MANY",
+                        "connectorHint": "UNCONDITIONAL",
+                        "executionHint": "FLOW",
+                        "implementationID": 444132438,
+                        "x": -304,
+                        "y": 32,
+                        "width": 32,
+                        "height": 32,
+                        "inputConnectorIDs": [],
+                        "outputSuccessConnectorIDs": [],
+                        "outputFailureConnectorIDs": [],
+                        "outputUnconditionalConnectorIDs": [
+                            246157
+                        ],
+                        "outputTrueConnectorIDs": [],
+                        "outputFalseConnectorIDs": [],
+                        "exportMappings": {},
+                        "parameters": {
+                            "1": {
+                                "slot": 1,
+                                "name": "Start",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "Start 0"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            }
+                        },
+                        "activationStatus": "ENABLED",
+                        "outputIterationConnectorIDs": [],
+                        "inputIterationConnectorIDs": []
+                    },
+                    "246158": {
+                        "id": 246158,
+                        "inputCardinality": "ONE",
+                        "outputCardinality": "MANY",
+                        "connectorHint": "SUCCESS_FAIL",
+                        "executionHint": "TRANSFORM",
+                        "implementationID": 1896325668,
+                        "x": -174,
+                        "y": 37,
+                        "width": 32,
+                        "height": 32,
+                        "inputConnectorIDs": [
+                            246157
+                        ],
+                        "outputSuccessConnectorIDs": [],
+                        "outputFailureConnectorIDs": [],
+                        "outputUnconditionalConnectorIDs": [],
+                        "outputTrueConnectorIDs": [],
+                        "outputFalseConnectorIDs": [],
+                        "exportMappings": {},
+                        "parameters": {
+                            "1": {
+                                "slot": 1,
+                                "name": "Name",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "insertdata_test 0"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "2": {
+                                "slot": 2,
+                                "name": "Transformation Job",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "insert_rrd"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "3": {
+                                "slot": 3,
+                                "name": "",
+                                "elements": {},
+                                "visible": false
+                            },
+                            "4": {
+                                "slot": 4,
+                                "name": "Set Scalar Variables",
+                                "elements": {},
+                                "visible": true
+                            },
+                            "5": {
+                                "slot": 5,
+                                "name": "Set Grid Variables",
+                                "elements": {},
+                                "visible": true
+                            }
+                        },
+                        "activationStatus": "ENABLED",
+                        "outputIterationConnectorIDs": [],
+                        "inputIterationConnectorIDs": []
+                    }
+                },
+                "successConnectors": {},
+                "failureConnectors": {},
+                "unconditionalConnectors": {
+                    "246157": {
+                        "id": 246157,
+                        "sourceID": 246159,
+                        "targetID": 246158
+                    }
+                },
+                "trueConnectors": {},
+                "falseConnectors": {},
+                "iterationConnectors": {},
+                "noteConnectors": {},
+                "canUndo": false,
+                "undoCommand": "Rename Job",
+                "undoCreated": 1717583201442,
+                "canRedo": false,
+                "redoCommand": "",
+                "redoCreated": -1,
+                "notes": {},
+                "variables": {},
+                "grids": {}
+            },
+            "info": {
+                "id": 246152,
+                "name": "insertdata_rrd",
+                "description": "",
+                "type": "ORCHESTRATION",
+                "tag": "229f0f82-73ff-4133-a3fc-28516b827a7c"
+            },
+            "path": [
+                "pipelines"
+            ]
+        }
+    ],
+    "version": "1.67.7",
+    "environment": "snowflake"
+}
