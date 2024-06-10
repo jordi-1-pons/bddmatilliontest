@@ -1,0 +1,406 @@
+{
+    "objects": [
+        {
+            "jobObject": {
+                "JobType": ".OrchestrationJob",
+                "id": 216177,
+                "revision": 10,
+                "created": 1716974363530,
+                "timestamp": 1716974363530,
+                "components": {
+                    "216176": {
+                        "id": 216176,
+                        "inputCardinality": "ZERO",
+                        "outputCardinality": "MANY",
+                        "connectorHint": "UNCONDITIONAL",
+                        "executionHint": "FLOW",
+                        "implementationID": 444132438,
+                        "x": -464,
+                        "y": 0,
+                        "width": 32,
+                        "height": 32,
+                        "inputConnectorIDs": [],
+                        "outputSuccessConnectorIDs": [],
+                        "outputFailureConnectorIDs": [],
+                        "outputUnconditionalConnectorIDs": [
+                            216180
+                        ],
+                        "outputTrueConnectorIDs": [],
+                        "outputFalseConnectorIDs": [],
+                        "exportMappings": {},
+                        "parameters": {
+                            "1": {
+                                "slot": 1,
+                                "name": "Start",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "Start 0"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            }
+                        },
+                        "activationStatus": "ENABLED",
+                        "outputIterationConnectorIDs": [],
+                        "inputIterationConnectorIDs": []
+                    },
+                    "216181": {
+                        "id": 216181,
+                        "inputCardinality": "ONE",
+                        "outputCardinality": "MANY",
+                        "connectorHint": "SUCCESS_FAIL",
+                        "executionHint": "EXECUTE",
+                        "implementationID": -1773186829,
+                        "x": -288,
+                        "y": 0,
+                        "width": 32,
+                        "height": 32,
+                        "inputConnectorIDs": [
+                            216187
+                        ],
+                        "outputSuccessConnectorIDs": [],
+                        "outputFailureConnectorIDs": [],
+                        "outputUnconditionalConnectorIDs": [
+                            216186
+                        ],
+                        "outputTrueConnectorIDs": [],
+                        "outputFalseConnectorIDs": [],
+                        "exportMappings": {},
+                        "parameters": {
+                            "1": {
+                                "slot": 1,
+                                "name": "Name",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "Python Script 1"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "2": {
+                                "slot": 2,
+                                "name": "Script",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "###\n# Variables are directly accessible: \n#   print (myvar)\n# Updating a variable:\n#   context.updateVariable('myvar', 'new-value')\n# Grid Variables are accessible via the context:\n#   print (context.getGridVariable('mygridvar'))\n# Updating a grid variable:\n#   context.updateGridVariable('mygridvar', [['list','of'],['lists','!']])\n# A database cursor can be accessed from the context (Jython only):\n#   cursor = context.cursor()\n#   cursor.execute('select count(*) from mytable')\n#   rowcount = cursor.fetchone()[0]\n###\n\nimport os\nimport shutil\nimport json\n\n# Function to fetch table data\ndef fetch_table_data():\n    cursor = context.cursor()\n    table_name = '\"COM_GERMANY_IM_DNA_STG\".\"STG_GERMANY\".\"fact_test\"'\n\n    # Query to fetch column values\n    query = 'SELECT \"rep_status\" FROM {}'.format(table_name)\n    cursor.execute(query)\n    result = cursor.fetchall()\n    rep_status_values = [row[0] for row in result]\n\n    return table_name, rep_status_values\n\n# Define the directory path\ndirectory_path = '/tmp/table_data'\n\n# Delete the directory if it exists\nif os.path.exists(directory_path):\n    shutil.rmtree(directory_path)\n\n# Create the directory\nos.makedirs(directory_path)\n\n# Fetch table data\ntable_name, rep_status_values = fetch_table_data()\n\n# Write table name and rep_status values to a file\nfile_path = os.path.join(directory_path, 'insert_data.txt')\nwith open(file_path, 'w') as file:\n    data = {\n        \"table_name\": table_name,\n        \"rep_status_values\": rep_status_values\n    }\n    json.dump(data, file)\n\nprint(\"Table data has been written to /tmp/table_data/insert_data.txt\")"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "3": {
+                                "slot": 3,
+                                "name": "Interpreter",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "Jython"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "4": {
+                                "slot": 4,
+                                "name": "Timeout",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "INTEGER",
+                                                "value": "360"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": false
+                            },
+                            "5": {
+                                "slot": 5,
+                                "name": "User",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "Restricted"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": false
+                            }
+                        },
+                        "activationStatus": "ENABLED",
+                        "outputIterationConnectorIDs": [],
+                        "inputIterationConnectorIDs": []
+                    },
+                    "216182": {
+                        "id": 216182,
+                        "inputCardinality": "ONE",
+                        "outputCardinality": "MANY",
+                        "connectorHint": "SUCCESS_FAIL",
+                        "executionHint": "EXECUTE",
+                        "implementationID": -1773186829,
+                        "x": -176,
+                        "y": 0,
+                        "width": 32,
+                        "height": 32,
+                        "inputConnectorIDs": [
+                            216186
+                        ],
+                        "outputSuccessConnectorIDs": [],
+                        "outputFailureConnectorIDs": [],
+                        "outputUnconditionalConnectorIDs": [],
+                        "outputTrueConnectorIDs": [],
+                        "outputFalseConnectorIDs": [],
+                        "exportMappings": {},
+                        "parameters": {
+                            "1": {
+                                "slot": 1,
+                                "name": "Name",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "Python Script 0"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "2": {
+                                "slot": 2,
+                                "name": "Script",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "###\n# Variables are directly accessible: \n#   print (myvar)\n# Updating a variable:\n#   context.updateVariable('myvar', 'new-value')\n# Grid Variables are accessible via the context:\n#   print (context.getGridVariable('mygridvar'))\n# Updating a grid variable:\n#   context.updateGridVariable('mygridvar', [['list','of'],['lists','!']])\n# A database cursor can be accessed from the context (Jython only):\n#   cursor = context.cursor()\n#   cursor.execute('select count(*) from mytable')\n#   rowcount = cursor.fetchone()[0]\n###\nimport os\nimport shutil\nimport subprocess\n\n# Define the repository URL and the local path to clone the repository\nrepo_url = 'https://github.com/jordi-1-pons/bddmatilliontest2.git'\nlocal_repo_path = '/tmp/bddmatilliontest2'\n\n# Delete the local repository folder if it exists\nif os.path.exists(local_repo_path):\n    shutil.rmtree(local_repo_path)\n\n# Clone the GitHub repository\nsubprocess.run(['git', 'clone', repo_url, local_repo_path], check=True)\n\n# Change to the directory where the tests are\nos.chdir(local_repo_path)\n\n# Create a new virtual environment\nvenv_path = os.path.join(local_repo_path, 'venv')\nsubprocess.run(['python3', '-m', 'venv', venv_path], check=True)\n\n# Define the activation script based on the operating system\nif os.name == 'nt':\n    activate_script = os.path.join(venv_path, 'Scripts', 'activate.bat')\nelse:\n    activate_script = os.path.join(venv_path, 'bin', 'activate')\n\n# Ensure the activate script has the right permissions\nif os.name != 'nt':\n    subprocess.run(['chmod', '+x', activate_script], check=True)\n\n# Function to check if dependencies are already installed\ndef check_dependencies():\n    try:\n        result = subprocess.run([os.path.join(venv_path, 'bin', 'pip'), 'show', 'behave'], check=True, stdout=subprocess.PIPE)\n        if \"Name: behave\" in result.stdout.decode():\n            print(\"Behave is already installed.\")\n            return True\n    except subprocess.CalledProcessError:\n        return False\n\n# Install dependencies if not already installed\nif not check_dependencies():\n    print(\"Installing dependencies...\")\n    subprocess.run([os.path.join(venv_path, 'bin', 'pip'), 'install', '--upgrade', 'pip'], check=True)\n    subprocess.run([os.path.join(venv_path, 'bin', 'pip'), 'install', 'behave'], check=True)\n\n# Activate the virtual environment and run the Behave tests in one shell command\nif os.name == 'nt':\n    commands = f\"\"\"cd {local_repo_path} && call {activate_script} && behave\"\"\"\nelse:\n    commands = f\"\"\"cd {local_repo_path} && source {activate_script} && behave\"\"\"\n\n# Execute the commands\nprocess = subprocess.Popen(['/bin/bash', '-c', commands], stdout=subprocess.PIPE, stderr=subprocess.PIPE)\noutput, error = process.communicate()\n\n# Check if the Behave tests were executed successfully\nif process.returncode == 0:\n    print(\"Behave tests executed successfully.\")\nelse:\n    print(\"Error executing Behave tests.\")\n\n# Print the output and error\nprint(\"Output from behave test:\")\nprint(output.decode())\nprint(\"Error from behave test (if any):\")\nprint(error.decode())"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "3": {
+                                "slot": 3,
+                                "name": "Interpreter",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "Python 3"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "4": {
+                                "slot": 4,
+                                "name": "Timeout",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "INTEGER",
+                                                "value": "360"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "5": {
+                                "slot": 5,
+                                "name": "User",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "Restricted"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": false
+                            }
+                        },
+                        "activationStatus": "ENABLED",
+                        "outputIterationConnectorIDs": [],
+                        "inputIterationConnectorIDs": []
+                    },
+                    "216183": {
+                        "id": 216183,
+                        "inputCardinality": "ONE",
+                        "outputCardinality": "MANY",
+                        "connectorHint": "SUCCESS_FAIL",
+                        "executionHint": "TRANSFORM",
+                        "implementationID": 1896325668,
+                        "x": -384,
+                        "y": 0,
+                        "width": 32,
+                        "height": 32,
+                        "inputConnectorIDs": [
+                            216180
+                        ],
+                        "outputSuccessConnectorIDs": [],
+                        "outputFailureConnectorIDs": [],
+                        "outputUnconditionalConnectorIDs": [
+                            216187
+                        ],
+                        "outputTrueConnectorIDs": [],
+                        "outputFalseConnectorIDs": [],
+                        "exportMappings": {},
+                        "parameters": {
+                            "1": {
+                                "slot": 1,
+                                "name": "Name",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "sqlquery 0"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "2": {
+                                "slot": 2,
+                                "name": "Transformation Job",
+                                "elements": {
+                                    "1": {
+                                        "slot": 1,
+                                        "values": {
+                                            "1": {
+                                                "slot": 1,
+                                                "type": "STRING",
+                                                "value": "sqlquery"
+                                            }
+                                        }
+                                    }
+                                },
+                                "visible": true
+                            },
+                            "3": {
+                                "slot": 3,
+                                "name": "",
+                                "elements": {},
+                                "visible": false
+                            },
+                            "4": {
+                                "slot": 4,
+                                "name": "Set Scalar Variables",
+                                "elements": {},
+                                "visible": true
+                            },
+                            "5": {
+                                "slot": 5,
+                                "name": "Set Grid Variables",
+                                "elements": {},
+                                "visible": true
+                            }
+                        },
+                        "activationStatus": "ENABLED",
+                        "outputIterationConnectorIDs": [],
+                        "inputIterationConnectorIDs": []
+                    }
+                },
+                "successConnectors": {},
+                "failureConnectors": {},
+                "unconditionalConnectors": {
+                    "216180": {
+                        "id": 216180,
+                        "sourceID": 216176,
+                        "targetID": 216183
+                    },
+                    "216187": {
+                        "id": 216187,
+                        "sourceID": 216183,
+                        "targetID": 216181
+                    },
+                    "216186": {
+                        "id": 216186,
+                        "sourceID": 216181,
+                        "targetID": 216182
+                    }
+                },
+                "trueConnectors": {},
+                "falseConnectors": {},
+                "iterationConnectors": {},
+                "noteConnectors": {},
+                "canUndo": true,
+                "undoCommand": "Set Parameter",
+                "undoCreated": 1716972990577,
+                "canRedo": false,
+                "redoCommand": "",
+                "redoCreated": 1716971970038,
+                "notes": {},
+                "variables": {},
+                "grids": {}
+            },
+            "info": {
+                "id": 216177,
+                "name": "bdd_InsertData",
+                "description": "",
+                "type": "ORCHESTRATION",
+                "tag": "8cffcb74-a528-4bad-85f7-fd716a5db910"
+            },
+            "path": [
+                "pipelines"
+            ]
+        }
+    ],
+    "version": "1.67.7",
+    "environment": "snowflake"
+}
